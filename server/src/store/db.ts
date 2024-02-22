@@ -12,9 +12,11 @@ const sqlSchema = `
 
     CREATE TABLE IF NOT EXISTS Highlight
     (
-        id      TEXT PRIMARY KEY,
-        quote   TEXT,
-        summary TEXT
+        id         INTEGER PRIMARY KEY,
+        quote      TEXT,
+        summary    TEXT,
+        feedbackId INTEGER,
+        FOREIGN KEY (feedbackId) REFERENCES Feedback (id)
     );
 `;
 
