@@ -1,4 +1,4 @@
 .idea
-db.*
+*.sqlite*
 
 node_modules

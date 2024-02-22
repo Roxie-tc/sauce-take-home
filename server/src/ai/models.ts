@@ -8,9 +8,3 @@ export const highlightPromptResultSchema = z.object({
 })
 
 export type HighlightPromptResult = z.infer<typeof highlightPromptResultSchema>;
-
-
-
-
-
-

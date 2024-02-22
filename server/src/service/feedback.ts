@@ -9,6 +9,8 @@ const createFeedback = async (text: string) => {
   const feedback = await feedbackStore.createFeedback(text);
   const analysisResult = await prompt.runFeedbackAnalysis(feedback.text);
 
+  // TODO: Persist the highlights
+
   return feedback;
 }
 
