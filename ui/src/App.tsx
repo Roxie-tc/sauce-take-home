@@ -1,7 +1,11 @@
+import FeedbackList from "./feedback/feedback-list.tsx";
 
 function App() {
+
   return (
-    <div className="flex justify-center"><h1 className="font-mono">Feedback</h1></div>
+    <div className="flex flex-col gap-2 px-48 pt-12">
+      <FeedbackList/>
+    </div>
   )
 }
 

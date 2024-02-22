@@ -4,6 +4,6 @@
 
 @layer base {
   html {
-    @apply font-mono;
+    @apply font-mono bg-slate-900 text-purple-300;
   }
 }
