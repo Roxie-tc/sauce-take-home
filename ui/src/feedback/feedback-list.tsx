@@ -7,10 +7,7 @@ export default function FeedbackList() {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([])
 
   useEffect(() => {
-    feedbacksQuery(page, 10).then((result) => {
-      console.log(result.feedbacks)
-      setFeedbacks(result.feedbacks)
-    });
+    feedbacksQuery(page, 10).then((result) => setFeedbacks(result.feedbacks));
   }, [page]);
 
   return (
