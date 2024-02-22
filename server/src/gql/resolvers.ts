@@ -1,4 +1,5 @@
 import feedbackStore from "../store/feedback";
+import feeedbackService from "../service/feedback";
 
 /**
  * GraphQL Resolvers
@@ -14,7 +15,7 @@ const resolvers = {
   },
   Mutation: {
     createFeedback: (parent: unknown, args: { text: string }) => {
-      return feedbackStore.createFeedback(args.text)
+      return feeedbackService.createFeedback(args.text)
     }
   }
 };

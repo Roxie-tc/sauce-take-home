@@ -2,21 +2,23 @@
   "name": "technical-task",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development ts-node-dev --exit-child --respawn src/main.ts",
+    "dev": "dotenv -e .env -- cross-env NODE_ENV=development ts-node-dev --exit-child --respawn src/main.ts",
     "start": "ts-node src/main.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "jszklarz@sauce.app",
   "dependencies": {
     "@graphql-tools/schema": "^10.0.2",
     "better-sqlite3": "^9.4.3",
     "graphql": "^16.8.1",
     "graphql-yoga": "^5.1.1",
+    "openai": "^4.28.0",
     "sqlite3": "^5.1.7",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.4"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.9",
