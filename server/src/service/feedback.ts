@@ -14,6 +14,18 @@ const createFeedback = async (text: string) => {
   return feedback;
 }
 
+/**
+ * Gets a page of feedback entries
+ * @param page The page number
+ * @param perPage The number of entries per page
+ */
+const getFeedbackPage = async (page: number, perPage: number) => {
+  const values = await feedbackStore.getFeedbackPage(page, perPage);
+  const count = values.length;
+  return {values, count};
+}
+
 export default {
-  createFeedback
+  createFeedback,
+  getFeedbackPage,
 }

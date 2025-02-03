@@ -10,12 +10,17 @@ const resolvers = {
       return feedbackStore.getFeedback(args.id)
     },
     feedbacks: (parent: unknown, args: { page: number; per_page: number }) => {
-      return feedbackStore.getFeedbackPage(args.page, args.per_page)
+      return feeedbackService.getFeedbackPage(args.page, args.per_page)
     },
   },
   Mutation: {
     createFeedback: (parent: unknown, args: { text: string }) => {
       return feeedbackService.createFeedback(args.text)
+    }
+  },
+  Feedback: {
+    highlights: () => {
+      return []
     }
   }
 };
