@@ -11,6 +11,11 @@ const feedbacksDocument = gql`
       values {
         id
         text
+        highlights {
+        id
+        quote
+        summary
+      }
       }
       count
     }

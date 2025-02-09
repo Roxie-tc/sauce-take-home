@@ -16,6 +16,21 @@ export default function FeedbackList() {
       {feedbacks.map((feedback) => (
         <button key={feedback.id} className="bg-slate-700 bg-opacity-20 hover:bg-opacity-30 cursor-pointer rounded-lg py-2 px-4 text-left">
           <p className="text-red-300">{feedback.text}</p>
+          <div>
+            {feedback.highlights?.map((highlight) => (
+              <div>
+              <div key={highlight.id}>
+                <p className="text-gray-100">
+                  <strong>Quote:</strong> {highlight.quote}
+                </p>
+                <p className="text-gray-100">
+                  <strong>Summary:</strong> {highlight.summary}
+                </p>
+              </div>
+              </div>
+            ))}
+
+          </div>
         </button>
       ))}
     </div>
