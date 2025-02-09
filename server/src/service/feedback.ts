@@ -29,8 +29,11 @@ const createFeedback = async (text: string) => {
  */
 const getFeedbackPage = async (page: number, perPage: number) => {
   const values = await feedbackStore.getFeedbackPage(page, perPage);
-  const count = values.length;
-  return {values, count};
+  const count = feedbackStore.countFeedback();
+  const totalPages = Math.ceil(count / perPage);
+  const currentPage = Math.min(page, totalPages);
+
+  return {values, count,totalPages,currentPage};
 }
 
 export default {

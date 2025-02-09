@@ -26,6 +26,8 @@ const typeDefs = /* GraphQL */ `
   type FeedbackPage {
     values: [Feedback!]!
     count: Int!
+    totalPages:Int!
+    currentPage:Int!
   }
 `;
 
